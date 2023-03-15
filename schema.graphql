@@ -1,0 +1,63 @@
+type Query {
+  getInfo: RadioInfo!
+  getFrequency: Float!
+  getBandwidth: Float!
+  getAttenuation: Float!
+  getGain: Float!
+  getPreamp: Boolean!
+  getAttenuator: Boolean!
+  getLNAGain: Float!
+  getLNABypass: Boolean!
+  getTxEnable: Boolean!
+  getDriveLevel: Float!
+  getRIT: Float!
+  getXIT: Float!
+  getSplit: Boolean!
+  getAntenna: Int!
+  getAGCMode: String!
+  getAGCTarget: Float!
+  getAGCOffLevel: Float!
+  getAGCThreshold: Float!
+  getAGCDecay: Float!
+  getAGCAnalogGain: Float!
+  getAGCDigitalGain: Float!
+  getMute: Boolean!
+  getPower: Boolean!
+  getVoltage: Float!
+  getCurrent: Float!
+}
+
+type Mutation {
+  setFrequency(frequency: Float!): Float!
+  setBandwidth(bandwidth: Float!): Float!
+  setAttenuation(attenuation: Float!): Float!
+  setGain(gain: Float!): Float!
+  setPreamp(preamp: Boolean!): Boolean!
+  setAttenuator(attenuator: Boolean!): Boolean!
+  setLNAGain(gain: Float!): Float!
+  setLNABypass(bypass: Boolean!): Boolean!
+  setTxEnable(enable: Boolean!): Boolean!
+  setDriveLevel(level: Float!): Float!
+  setRIT(rit: Float!): Float!
+  setXIT(xit: Float!): Float!
+  setSplit(split: Boolean!): Boolean!
+  setAntenna(antenna: Int!): Int!
+  setAGCMode(mode: String!): String!
+  setAGCTarget(target: Float!): Float!
+  setAGCOffLevel(level: Float!): Float!
+  setAGCThreshold(threshold: Float!): Float!
+  setAGCDecay(decay: Float!): Float!
+  setAGCAnalogGain(gain: Float!): Float!
+  setAGCDigitalGain(gain: Float!): Float!
+  setMute(mute: Boolean!): Boolean!
+  setPower(power: Boolean!): Boolean!
+}
+
+type RadioInfo {
+  name: String!
+  model: String!
+  serialNumber: String!
+  firmwareVersion: String!
+  hardwareVersion: String!
+}
+
